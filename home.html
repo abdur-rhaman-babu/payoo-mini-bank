@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main class="flex justify-center items-center h-screen">
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+              <div class="artboard artboard-demo phone-3">
+                <div class="stats shadow">
+                    <div class="stat">
+                      <div id="current-balance" class="stat-value">9400</div>
+                      <div class="stat-desc">Available Balance</div>
+                    </div>
+                </div>
+                <div class="flex w-full flex-col">
+                    <div class="divider"></div>
+                    <div class="flex justify-center gap-5">
+                        <button id="add-money" class="btn btn-success">Add Money</button>
+                        <button id="cashout-money" class="btn btn-warning">Cash Out</button>
+                    </div>
+                    <div class="divider"></div>
+                    <!-- add money start -->
+                    <div id="add-amount" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl ml-4">
+                        <form class="card-body">
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Add Amount</span>
+                            </label>
+                            <input id="amount" type="text" placeholder="your amount" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Pin</span>
+                            </label>
+                            <input id="pin-number" type="password" placeholder="Pin number" class="input input-bordered" required />
+                            
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="add-money-btn" class="btn btn-primary">Add Amount</button>
+                          </div>
+                        </form>
+                      </div>
+                      <!-- add money end -->
+
+                      <!-- cash out start -->
+                      <div id="cashout-amount" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl ml-4 hidden">
+                        <form class="card-body">
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Cashout Amount</span>
+                            </label>
+                            <input id="cashout-amount" type="text" placeholder="your amount" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Pin</span>
+                            </label>
+                            <input id="cashout-pin-number" type="password" placeholder="Pin number" class="input input-bordered" required />
+                            
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="cashout-money-btn" class="btn btn-primary">Cash out</button>
+                          </div>
+                        </form>
+                      </div>
+                       <!-- cash out end -->
+                  </div>
+              </div>
+            </div>
+          </div>
+    </main>
+    <script src="js/cashout.js"></script>
+    <script src="js/addmoney.js"></script>
+    <script src="js/feature.js"></script>
+</body>
+</html>
